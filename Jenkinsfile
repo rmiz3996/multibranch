@@ -2,7 +2,7 @@ node('master')
 
  {
          
-stage('Continuous Download') 
+stage('Continuous Download_loans') 
 	
 {
               
@@ -10,7 +10,7 @@ stage('Continuous Download')
 	
 }
         
- stage('Continuous Build') 
+ stage('Continuous Build_loans') 
 	
 {
               
@@ -18,31 +18,7 @@ stage('Continuous Download')
 	
 }
        
-  stage('Continuous Deployment') 
-	
-{
-           
-  sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war  ubuntu@172.31.23.210:/var/lib/tomcat8/webapps/qaenv.war'
-	
-}
-       
-  stage('Continuous Testing') 
-	
-{
-   
-               sh label: '', script: 'echo "Testing Passed"'
-	
-}
-    
-    
-stage('Continuous Delivery') 
-	
-{
-    
-  
-        sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war  ubuntu@172.31.25.55:/var/lib/tomcat8/webapps/prodenv.war'
-	
-}
+ 
 
 
 }
