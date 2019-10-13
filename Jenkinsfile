@@ -2,7 +2,7 @@ node('master')
 
  {
          
-stage('Continuous Download') 
+stage('Continuous Download_master') 
 	
 {
               
@@ -10,7 +10,7 @@ stage('Continuous Download')
 	
 }
         
- stage('Continuous Build') 
+ stage('Continuous Build_master') 
 	
 {
               
